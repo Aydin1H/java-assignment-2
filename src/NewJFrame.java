@@ -227,7 +227,7 @@ public class NewJFrame extends javax.swing.JFrame {
             public void run() {
                 new NewJFrame().setVisible(true);
             }
-        });
+        });//
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
