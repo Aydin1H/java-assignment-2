@@ -1,0 +1,96 @@
+SQL Injection,Crafted SQL statement,SSL strip,Fake patch update
+Cross-Site Scripting (XSS),Inject <script> tag,Command injection payload,Buffer overflow payload
+Buffer Overflow,Excess input to crash program,Session fixation link,Click fraud
+Directory Traversal,Java deserialization,../ to access restricted files,CSS injection
+Command Injection,; rm -rf /,CSS injection,Command injection payload
+Privilege Escalation,Use SUID binary to gain root,Fake login form,CSS injection
+Insecure Deserialization,Object injection with malicious class,Click fraud,Phishing email
+Cross-Site Request Forgery (CSRF),Fake form auto-submission,Fake patch update,Phishing email
+Open Redirect,WiFi deauthentication,Redirect with unvalidated URL,Fake login form
+Clickjacking,Java deserialization,Invisible iframe overlay,SSL strip
+Path Traversal,../../../../etc/passwd,Phishing email,Java deserialization
+Unrestricted File Upload,Java deserialization,Upload web shell as .jpg,SSL strip
+Race Condition,Simultaneous threads accessing shared data,Session fixation link,Buffer overflow payload
+Weak Password Policy,Click fraud,Guessable credentials,SQL UNION injection
+Hardcoded Credentials,Recover creds from source,CSS injection,Fake login form
+Improper Input Validation,Inject scripts in forms,Buffer overflow payload,Click fraud
+XML External Entity (XXE),Phishing email,SQL UNION injection,Inject <!ENTITY> tag into XML
+Insecure Direct Object Reference (IDOR),Fake login form,CSS injection,Change ID in URL
+Misconfigured CORS,Buffer overflow payload,Java deserialization,Send cross-origin XHR with credentials
+Server-Side Request Forgery (SSRF),WiFi deauthentication,Force server to request internal URL,Buffer overflow payload
+Security Misconfiguration,WiFi deauthentication,Command injection payload,Access default admin panel
+Information Disclosure,Access sensitive debug info,Java deserialization,CSS injection
+Improper Authentication,Command injection payload,WiFi deauthentication,Bypass login with crafted token
+Click Fraud,Fake login form,Automated bot clicking ads,Click fraud
+Weak Encryption,Decrypt data with known weak cipher,Fake login form,Phishing email
+Session Fixation,CSS injection,Fake patch update,Force session ID before login
+Man-in-the-Middle (MitM),WiFi deauthentication,CSS injection,Intercept and modify traffic
+Broken Access Control,Access admin route as normal user,Command injection payload,Click fraud
+Unvalidated Redirects,Redirect with untrusted input,CSS injection,Command injection payload
+Reflected XSS,SQL UNION injection,Click fraud,Inject payload via URL parameter
+Stored XSS,Java deserialization,SSL strip,Store payload in comment field
+CRLF Injection,Inject \r\n into headers,Fake login form,SSL strip
+DNS Zone Transfer,Fake login form,Phishing email,Query for full DNS records
+Subdomain Takeover,Command injection payload,Buffer overflow payload,Host file points to abandoned DNS
+Shellshock,SQL UNION injection,Bash function exploit,Buffer overflow payload
+Weak JWT Secret,Fake login form,SSL strip,Crack with common wordlist
+LDAP Injection,Inject LDAP query logic,Java deserialization,SQL UNION injection
+Broken Crypto,Exploit predictable key generation,Fake login form,WiFi deauthentication
+Exposed S3 Bucket,Command injection payload,Java deserialization,Access via unauthenticated URL
+Stack Overflow,Overflow return address to RCE,CSS injection,Buffer overflow payload
+Integer Overflow,WiFi deauthentication,Fake patch update,Trigger math error to overwrite memory
+Host Header Injection,Inject malicious header,Command injection payload,SQL UNION injection
+Null Byte Injection,WiFi deauthentication,Terminate string with %00,SSL strip
+Prototype Pollution,Java deserialization,Override object prototype,Buffer overflow payload
+Insecure Cookie,Click fraud,Command injection payload,Steal session without HttpOnly
+Misconfigured Firewall,Fake login form,Access unfiltered ports,Java deserialization
+Improper Session Handling,Click fraud,Reuse session ID,WiFi deauthentication
+Improper File Permissions,Access files set with 777,Fake patch update,Phishing email
+Exposed Admin Interface,Fake login form,Direct URL access,Click fraud
+File Inclusion,Click fraud,SSL strip,Include remote malicious PHP file
+Local File Inclusion (LFI),../../../../var/log/auth.log,Fake login form,SSL strip
+Remote File Inclusion (RFI),Include file from attacker domain,Session fixation link,Click fraud
+Unprotected API,CSS injection,Session fixation link,Access endpoint without auth
+Improper Logging,Buffer overflow payload,Logs reveal sensitive data,Session fixation link
+Overly Verbose Error Messages,Buffer overflow payload,CSS injection,Reveal stack trace with sensitive info
+Use of HTTP instead of HTTPS,Fake patch update,Phishing email,Snoop traffic with MitM proxy
+Exposed .git Folder,SQL UNION injection,Download repo history,WiFi deauthentication
+Misconfigured Permissions (Cloud),Access full cloud bucket,Command injection payload,Phishing email
+Cache Poisoning,Inject into CDN cache,SSL strip,Click fraud
+Missing Rate Limiting,Brute force with no lockout,SQL UNION injection,Fake patch update
+Third-Party Dependency Exploit,Exploit vulnerable NPM package,Fake login form,Click fraud
+Insecure Mobile Storage,Fake patch update,Read unencrypted local data,WiFi deauthentication
+Unsecured WebSocket,Inject via open ws://,Fake patch update,Click fraud
+Missing MFA,Phishing email,Buffer overflow payload,Login with only password
+Improper Certificate Validation,WiFi deauthentication,SQL UNION injection,Accept self-signed cert
+Mobile Debug Enabled,Access local debug console,Fake patch update,SQL UNION injection
+Hardcoded API Keys,WiFi deauthentication,Java deserialization,Use leaked keys in public repo
+Lack of Binary Protections,Exploit ELF without ASLR,CSS injection,Fake patch update
+Improper Redirect Handling,Command injection payload,Click fraud,Follow malicious redirect blindly
+Publicly Accessible Config File,Read config.json from root,Phishing email,WiFi deauthentication
+Directory Indexing,Command injection payload,Session fixation link,View all files via autoindex
+Improper MIME Type,WiFi deauthentication,Execute JS from image tag,Click fraud
+Unsigned Firmware,Install malicious firmware,Session fixation link,Java deserialization
+Malicious NPM Package,Fake login form,Install typosquatted package,SQL UNION injection
+Unrestricted API Endpoint,Command injection payload,Fake login form,POST to admin function without token
+SSTI (Server-Side Template Injection),WiFi deauthentication,Phishing email,Inject {{7*7}}
+Weak CAPTCHA,Java deserialization,Bypass with OCR bot,CSS injection
+Lack of Input Sanitization,Java deserialization,Session fixation link,Inject command via input field
+Improper Access Control on Function,Call admin fn from normal user,Fake login form,WiFi deauthentication
+Exposed Swagger UI,Session fixation link,WiFi deauthentication,Run test API calls unauthenticated
+Client-Side Validation Only,Command injection payload,CSS injection,Bypass with manual POST
+Insecure Webhooks,SSL strip,Buffer overflow payload,Trigger webhook with forged payload
+Insufficient Transport Security,Fake login form,SSL strip,Send sensitive data over HTTP
+Use of Default Credentials,Java deserialization,Buffer overflow payload,Login with admin/admin
+Exposed Internal IP,Discover internal network ranges,SQL UNION injection,WiFi deauthentication
+Weak SSH Config,SQL UNION injection,Allow password login,Java deserialization
+Improper DNS Configuration,Poison DNS cache,Session fixation link,SQL UNION injection
+Malicious Image Upload,Phishing email,Upload polyglot file,WiFi deauthentication
+Session Timeout Missing,Fake patch update,Buffer overflow payload,Session stays active indefinitely
+SMTP Misconfiguration,Send email as anyone,SQL UNION injection,Session fixation link
+Improper Origin Check,WiFi deauthentication,Command injection payload,Browse with spoofed origin
+Insecure Iframe,Fake patch update,Phishing email,Frame third-party page without sandbox
+Improper Cache Headers,Session fixation link,Fake login form,Cache sensitive data
+CORS Wildcard on Credentials,Access data with cross-origin fetch,Fake login form,Session fixation link
+Vulnerable CMS Plugin,Session fixation link,Exploit outdated WordPress plugin,Fake login form
+IDOR (Redux),Command injection payload,Fake login form,Access someone else's invoice

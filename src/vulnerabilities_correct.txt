@@ -1,0 +1,96 @@
+SQL Injection,Crafted SQL statement
+Cross-Site Scripting (XSS),Inject <script> tag
+Buffer Overflow,Excess input to crash program
+Directory Traversal,../ to access restricted files
+Command Injection,; rm -rf /
+Privilege Escalation,Use SUID binary to gain root
+Insecure Deserialization,Object injection with malicious class
+Cross-Site Request Forgery (CSRF),Fake form auto-submission
+Open Redirect,Redirect with unvalidated URL
+Clickjacking,Invisible iframe overlay
+Path Traversal,../../../../etc/passwd
+Unrestricted File Upload,Upload web shell as .jpg
+Race Condition,Simultaneous threads accessing shared data
+Weak Password Policy,Guessable credentials
+Hardcoded Credentials,Recover creds from source
+Improper Input Validation,Inject scripts in forms
+XML External Entity (XXE),Inject <!ENTITY> tag into XML
+Insecure Direct Object Reference (IDOR),Change ID in URL
+Misconfigured CORS,Send cross-origin XHR with credentials
+Server-Side Request Forgery (SSRF),Force server to request internal URL
+Security Misconfiguration,Access default admin panel
+Information Disclosure,Access sensitive debug info
+Improper Authentication,Bypass login with crafted token
+Click Fraud,Automated bot clicking ads
+Weak Encryption,Decrypt data with known weak cipher
+Session Fixation,Force session ID before login
+Man-in-the-Middle (MitM),Intercept and modify traffic
+Broken Access Control,Access admin route as normal user
+Unvalidated Redirects,Redirect with untrusted input
+Reflected XSS,Inject payload via URL parameter
+Stored XSS,Store payload in comment field
+CRLF Injection,Inject \r\n into headers
+DNS Zone Transfer,Query for full DNS records
+Subdomain Takeover,Host file points to abandoned DNS
+Shellshock,Bash function exploit
+Weak JWT Secret,Crack with common wordlist
+LDAP Injection,Inject LDAP query logic
+Broken Crypto,Exploit predictable key generation
+Exposed S3 Bucket,Access via unauthenticated URL
+Stack Overflow,Overflow return address to RCE
+Integer Overflow,Trigger math error to overwrite memory
+Host Header Injection,Inject malicious header
+Null Byte Injection,Terminate string with %00
+Prototype Pollution,Override object prototype
+Insecure Cookie,Steal session without HttpOnly
+Misconfigured Firewall,Access unfiltered ports
+Improper Session Handling,Reuse session ID
+Improper File Permissions,Access files set with 777
+Exposed Admin Interface,Direct URL access
+File Inclusion,Include remote malicious PHP file
+Local File Inclusion (LFI),../../../../var/log/auth.log
+Remote File Inclusion (RFI),Include file from attacker domain
+Unprotected API,Access endpoint without auth
+Improper Logging,Logs reveal sensitive data
+Overly Verbose Error Messages,Reveal stack trace with sensitive info
+Use of HTTP instead of HTTPS,Snoop traffic with MitM proxy
+Exposed .git Folder,Download repo history
+Misconfigured Permissions (Cloud),Access full cloud bucket
+Cache Poisoning,Inject into CDN cache
+Missing Rate Limiting,Brute force with no lockout
+Third-Party Dependency Exploit,Exploit vulnerable NPM package
+Insecure Mobile Storage,Read unencrypted local data
+Unsecured WebSocket,Inject via open ws://
+Missing MFA,Login with only password
+Improper Certificate Validation,Accept self-signed cert
+Mobile Debug Enabled,Access local debug console
+Hardcoded API Keys,Use leaked keys in public repo
+Lack of Binary Protections,Exploit ELF without ASLR
+Improper Redirect Handling,Follow malicious redirect blindly
+Publicly Accessible Config File,Read config.json from root
+Directory Indexing,View all files via autoindex
+Improper MIME Type,Execute JS from image tag
+Unsigned Firmware,Install malicious firmware
+Malicious NPM Package,Install typosquatted package
+Unrestricted API Endpoint,POST to admin function without token
+SSTI (Server-Side Template Injection),Inject {{7*7}}
+Weak CAPTCHA,Bypass with OCR bot
+Lack of Input Sanitization,Inject command via input field
+Improper Access Control on Function,Call admin fn from normal user
+Exposed Swagger UI,Run test API calls unauthenticated
+Client-Side Validation Only,Bypass with manual POST
+Insecure Webhooks,Trigger webhook with forged payload
+Insufficient Transport Security,Send sensitive data over HTTP
+Use of Default Credentials,Login with admin/admin
+Exposed Internal IP,Discover internal network ranges
+Weak SSH Config,Allow password login
+Improper DNS Configuration,Poison DNS cache
+Malicious Image Upload,Upload polyglot file
+Session Timeout Missing,Session stays active indefinitely
+SMTP Misconfiguration,Send email as anyone
+Improper Origin Check,Browse with spoofed origin
+Insecure Iframe,Frame third-party page without sandbox
+Improper Cache Headers,Cache sensitive data
+CORS Wildcard on Credentials,Access data with cross-origin fetch
+Vulnerable CMS Plugin,Exploit outdated WordPress plugin
+IDOR (Redux),Access someone else's invoice
