@@ -22,7 +22,12 @@ public class QuestionPicker {
             Filewriter writerCorrect = new Filewriter(new File(vulnerabilities_correct.txt));
             Filewriter writerIncorrect = new Filewriter(new File(vulnerabilities_scrambled.txt));
             
-            
+            while (writerIncorrect.hasNext()){
+                String line = writerIncorrect.nextLine();
+                String[] arr = line.split(",");
+                vuls.append(arr[0]);
+                
+            }
             
         }
     
