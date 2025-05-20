@@ -9,11 +9,14 @@
  */
 public class QuestionGame {
     // Association
-    private QuestionPicker questions; 
+    private final QuestionPicker questions; 
     private int currentQuestion = 0;
+    String vuls;
+    String 
     
     public QuestionGame(){
         questions = new QuestionPicker();
+        getVulnerability
     }
     
    public String getCurrentVulnerability() {
@@ -43,8 +46,10 @@ public class QuestionGame {
         return currentQuestion >= 9;
     }
 
-    // Get the current question number (for GUI)
+    // Get the current question number (for GUI and indexing)
     public int getCurrentQuestionNumber() {
         return currentQuestion ++ ; // So it shows 1-based index in UI
     }
+    
+    
 }
