@@ -12,11 +12,11 @@ public class QuestionGame {
     private final QuestionPicker questions; 
     private int currentQuestion = 0;
     String vuls;
-    String 
+    String choices[];
+    String correct;
     
     public QuestionGame(){
         questions = new QuestionPicker();
-        getVulnerability
     }
     
    public String getCurrentVulnerability() {
@@ -51,5 +51,16 @@ public class QuestionGame {
         return currentQuestion ++ ; // So it shows 1-based index in UI
     }
     
+    public String getVul(){
+        return questions.getVulnerability(currentQuestion);
+    }
+    
+    public String[] getChoices(){
+        return questions.getChoices(currentQuestion);
+    }
+    
+    public String getAnswer(){
+        return questions.getCorrectAnswer(currentQuestion);
+    }
     
 }
