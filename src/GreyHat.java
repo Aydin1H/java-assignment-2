@@ -4,7 +4,7 @@
  */
 
 /**
- *
+ * Class inherited by Hacker class. Meant to be what a grey hat would do
  * @author 342335817
  */
 public class GreyHat extends Hacker{
@@ -13,6 +13,15 @@ public class GreyHat extends Hacker{
         super(name);
     }
     
+    public GreyHat(){
+        super();
+    }
+    
+    // Overrides the result method
+    /*
+    * This method gives 2 results for being a grey hat hacker
+    * @return String - returns a string message
+    */
     @Override
     public String result(){
         if (Math.random() < 0.5){

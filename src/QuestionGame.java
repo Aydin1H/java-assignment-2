@@ -8,57 +8,70 @@
  * @author 342335817
  */
 public class QuestionGame {
-    // Association
+    // Association 
     private final QuestionPicker questions; 
+    
+    // Variables
     private int currentQuestion = 0;
-    String vuls;
-    String choices[];
-    String correct;
     
     public QuestionGame(){
         questions = new QuestionPicker();
     }
-    
-   public String getCurrentVulnerability() {
-        return questions.getVulnerability(currentQuestion);
-    }
-
-    // Get the 3 choices for the current vulnerability
-    public String[] getCurrentChoices() {
-        return questions.getChoices(currentQuestion);
-    }
-
-    // Check if the selected answer is correct
+ 
+    /*
+    * Check if the selected answer is correct
+    * @param - gets the selected choice of the quesiton
+    * @return boolean - returns if the answer is correct
+    */
     public boolean isCorrect(String selectedChoice) {
         String correct = questions.getCorrectAnswer(currentQuestion);
         return selectedChoice.equals(correct);
     }
-
-    // Move to the next question
+    
+    /*
+    * Moves to the next question
+    */
     public void nextQuestion() {
         if (currentQuestion < 9) {
-            currentQuestion++;
+            currentQuestion ++;
         }
     }
-
-    // Check if the game is finished
+    /*
+    * Returns the current question number
+    * @return int - current question plus 1
+    */
+    public int getCurrentQuestionNumber(){
+        return (currentQuestion + 1);
+    }
+    
+    /*
+    * Check if the game is finished
+    * @return boolean value 
+    */
     public boolean isFinished() {
         return currentQuestion >= 9;
     }
 
-    // Get the current question number (for GUI and indexing)
-    public int getCurrentQuestionNumber() {
-        return currentQuestion ++ ; // So it shows 1-based index in UI
-    }
-    
+    /*
+    * Gets the vulnerability
+    * @return the vulnerability
+    */
     public String getVul(){
         return questions.getVulnerability(currentQuestion);
     }
     
+    /*
+    * Gets the choices
+    * @return the string array of choices
+    */
     public String[] getChoices(){
         return questions.getChoices(currentQuestion);
     }
     
+    /*
+    * Gets the correct answer
+    * @return the answer
+    */
     public String getAnswer(){
         return questions.getCorrectAnswer(currentQuestion);
     }
